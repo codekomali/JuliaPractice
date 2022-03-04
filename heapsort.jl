@@ -64,7 +64,10 @@ function swap!(heap, index1, index2)
 end
 
 
-function heapsort(arr::Vector; desc = true, min = !desc, compareFn = min ? (x, y) -> x < y : (x, y) -> x > y)
+function heapsort(arr::Vector; 
+    desc = true, 
+    min = !desc, 
+    compareFn = min ? (x, y) -> x < y : (x, y) -> x > y)
     insertFn! = (_heap, _elm) -> insert!(_heap, _elm, min = min, compareFn = compareFn)
     deleteFn! = (_heap) -> delete!(_heap, min = min, compareFn = compareFn)
     heap = reduce(insertFn!, arr, init = [])
