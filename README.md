@@ -5,5 +5,5 @@ The best way to learn a programming language is to start working with it. One go
 - Binary Search
 
 ## Warning
-This project is not to showcase the best possible way to implement the above algorithms in Julia. This is just an outcome of my own learning process. Even if I later learn a better way to implement the same, I may not have time to come back and improve the implementation.
+This project is not to showcase the best possible way to implement the above algorithms in Julia. This is just an outcome of my own learning process. Even if I later learn a better way to implement the same, I may not have time to come back and improve this implementation.
 

@@ -1,5 +1,7 @@
 using Test
 
+# Binary Search - Returns the index of the element if found, 
+# otherwise returns -1
 function binarySearch(arr::Vector, elem;
     desc = true,
     compareFn = desc ? (x, y) -> x > y : (x, y) -> x < y,
