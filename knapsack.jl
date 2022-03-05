@@ -1,6 +1,8 @@
 using Test, Printf, Memoize
 
+# A global variable just for simple benchmarking
 called = 0
+
 # Using the Memoize package
 @memoize Dict function knapsack(values, weights, MaxWieght)
     global called += 1
@@ -31,7 +33,8 @@ function compute_knapsack(values, weights, MaxWieght; memoized = true)
     empty!(memoize_cache(knapsack))
     global called = 0
     result = memoized ? knapsack(values, weights, MaxWieght) : knapsack_bruteforce(values, weights, MaxWieght)
-    @printf "\n Function called: %d" called
+    #uncomment the below code for call count
+    #@printf "\n Function called: %d \n" called
     return result
 end
 

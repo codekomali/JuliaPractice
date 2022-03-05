@@ -1,5 +1,8 @@
 using Test
 
+include("StudentData.jl")
+using .StudentData
+
 # Binary Search - Returns the index of the element if found, 
 # otherwise returns -1
 function binarySearch(arr::Vector, elem;
@@ -18,26 +21,6 @@ function binarySearch(arr::Vector, elem;
         binarySearch(arr[1:mid-1], elem,
             desc = desc, compareFn = compareFn, startindex = startindex)
     end
-end
-
-# Complex type
-struct Student
-    name::String
-    rollno::String
-    cgpa::Float64
-end
-
-
-sortedStudents = [
-    Student("pip", "s2020126", 9.9),
-    Student("jack", "s2020123", 8.9),
-    Student("mark", "s2020127", 7.9),
-    Student("tom", "s2020125", 6.9),
-    Student("jill", "s2020124", 4.9)
-]
-# comparison function
-function studentCompareFn(x::Student, y::Student)
-    x.cgpa > y.cgpa
 end
 
 @testset "Binary search" begin
