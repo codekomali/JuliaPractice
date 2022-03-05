@@ -3,6 +3,7 @@ The best way to learn a programming language is to start working with it. One go
 
 - [Merge Sort](https://en.wikipedia.org/wiki/Merge_sort)
 - [Heap Sort](https://en.wikipedia.org/wiki/Heapsort)
+- [Quick Sort](https://en.wikipedia.org/wiki/Quicksort)
 - [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 - [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) (Prime number Generation)
 - [0-1 Knapsack Problem](https://en.wikipedia.org/wiki/Knapsack_problem#0-1_knapsack_problem)
