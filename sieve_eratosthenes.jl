@@ -9,7 +9,7 @@ function generateprime(limit)
         if boolArray[num] == false
             continue
         end
-        # Don't touch the element, just its multiples. Hence starting from elm*2.
+        # Don't touch the element, just its multiples. Hence starting from num*2.
         for j in (num*2):num:limit
             boolArray[j] = false
         end
@@ -21,8 +21,7 @@ end
 function primeindexes(boolArray)
     filter(x -> x!=-1, #filter all -1
             #note: the additional comma is required for destructing tuples in anonymous functions
-            map(
-                ((i,v),)->v ? i : -1, #if value is true return index otherwise -1
+            map(((i,v),)->v ? i : -1, #if value is true return index otherwise -1
                 enumerate(boolArray))) # enumerate index and value as list of tuples
 end
 
